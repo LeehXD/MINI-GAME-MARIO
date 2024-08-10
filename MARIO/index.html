@@ -5,17 +5,38 @@
   <link rel="stylesheet" href="styles.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MARIO</title>
+  <title>MARIOs</title>
 </head>
 <body>
+
    <div class="game">
-    <img class="mario" src="img/mario.gif" alt="mario">
+    <img class="mario" src="img/mickey_run.gif" alt="mario">
     <img class="pipe" src="img/pipe.png" alt="cano">
     <img class="clouds" src="img/clouds.png" alt="nuvem">
-    <button class="start" onclick="startGame()">Iniciar</button>
    </div>
 
-    <div class="game-over"><h1>Game Over :(</h1><button onclick="restartGame()">Reiniciar</button></div>
+    <div class="game-over popup-overlay">
+      <div class="gameover_body">
+      <h1>Game Over :(</h1>
+      <button onclick="restartGame()">Reiniciar</button>
+      </div>
+    </div>
+
+    <div class="menu popup-overlay">
+      <div class="menu_body">
+         <p>Escolha o personagem:</p>
+         <button class="start" onclick="startGame('mario')">
+            Mario
+         </button><br/>
+         <button class="start" onclick="startGame('sonic')">
+            Sonic
+         </button>
+         <button class="start" onclick="startGame('mickey')">
+            Mickey
+         </button>
+      </div>
+    </div>
+
 </body>
 <script src="script.js"></script>
 </html>
